@@ -81,6 +81,14 @@ footer{
     position: relative;
 }
 
+@media screen and (max-width: 800px) {
+    .map{
+        display: none;
+    }
+}
+    
+
+
 .bg-op-white{
     background-color: rgba(255, 250, 250, 0.9);
 }
@@ -107,6 +115,7 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 
@@ -119,16 +128,18 @@ h2{
 }
 
 .providers  img{
-    width: 200px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 10px;
+    border: 2px solid rgb(85, 85, 85);
 }
 .providers h2{
     padding-bottom: 40px
 }
 
 .provider-logo{
-    padding-top: 20px;
+    padding-top: 0px;
     padding-bottom: 20px;
     text-align: center;
 }
@@ -163,13 +174,14 @@ h2{
 }
 
 .providers-block{
-    border: 1px solid #2d2e2ee6;
-    padding: 40px 10px;
+    border: 2px solid #000000;
+    background-color: rgb(250, 250, 250);
+    padding: 10px 10px;
     border-radius: 20px;
 }
 
 .project{
-    height: 100vh;
+    
     padding-top: 40px;
 }
 
@@ -181,11 +193,120 @@ h2{
     margin: 40px auto;
     padding: 20px;
     width: max-content;
-    border: 1px solid black;
+    border: 5px solid black;
     border-radius: 5px;
     
 }
 
 .callback span{
     margin: 10px;
+}
+
+.provider-discription{
+    font-size: 20px;
+}
+
+
+h3{
+    font-size: 20pt;
+    padding-bottom: 10px;
+}
+
+footer{
+    opacity: 0.9;
+}
+
+.call{
+    opacity: 1;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    justify-content:start;
+    align-items: flex-end;
+    animation-duration: 500ms;
+    animation-name: opacityUp;
+    
+}
+
+@keyframes opacityUp {
+    from{
+        background-color: rgba(0, 0, 0, 0.0);
+        
+    }
+    to{
+        background-color: rgba(0, 0, 0, 0.9);
+        display: flex;
+    }
+    
+}
+
+@keyframes opacityDown {
+    from{
+        opacity: 1;
+    }
+    to{
+       opacity: 0;
+    }
+    
+}
+
+.call_inner{
+    border-radius: 5px;
+    position: relative;
+    padding: 30px;
+    width: fit-content;
+    background-color: white;
+    margin: auto;
+}
+
+.exit_button{
+    position: relative;
+    margin: 20px;
+    position: absolute;
+
+}
+
+.exit_button img{
+    color: #fff;
+    
+}
+
+.call_button{
+    background-color: transparent;
+    border: none;
+}
+
+.gallery{
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.gallery-cell{
+    padding: 10px;
+    width: 30%;
+    text-align: center;
+    border:2px solid gray;
+    margin: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 5px 3px 2px 2px rgba(128, 128, 128, 0.664);
+}
+
+.gallery-cell img{
+    width: 100%;
+
+   
+}
+
+.visit tr :last-child{
+    padding-left: 20px;
 }
